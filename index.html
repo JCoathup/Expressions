@@ -1,0 +1,51 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Expressions</title>
+<link rel="stylesheet" type="text/css" href="css_reset.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="UTF-8">
+<meta property="og:title" content="Expressions" />
+<meta property="og:site_name" content="thewebassassin.com"/>
+<meta property="og:url" content="http://thewebassassin.com" />
+<meta property="og:description" content="Hello World" />
+<meta property="og:image" content="http://thewebassassin.com/upload/newfile.png" />
+<meta property="fb:app_id" content="YOUR_FACEBOOK_DEVLEOPER_ID"/>
+</head>
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : 'YOUR_FACEBOOK_DEVLEOPER_ID',
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <section id = "screen">
+    <nav>
+      <button type="button" id="stroke"><img id="stroke" src="images/brush.png"></button>
+      <button type="button" id="strokeColour"><img id="strokeColour" src="images/colour.png"></button>
+      <button type="button" id="backColour"><img id="backColour" src="images/background.png"></button>
+      <button type="button" id="clearScreen"><img id="clearScreen" src="images/clear.png"></button>
+      <button type="button" id="email"><img id="email" src="images/email.png"></button>
+      <button type="button" id="facebook"><img id="facebook" src="images/facebook.png"></button>
+    </nav>
+  <canvas id = "canvas">
+  </canvas>
+  <section id = "clearPallette">X</section>
+  <section id = "pallette"></section>
+</section>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
